@@ -27,7 +27,8 @@ function CreateCabinForm() {
   });
 
   function onSubmit(data) {
-    mutate(data);
+    // We use spreader to pass on the data and then add image at position 0
+    mutate({ ...data, image: data.image[0] });
   }
 
   function onError(errors) {
@@ -99,8 +100,12 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow label="Cabin photo">
-        <FileInput id="image" accept="image/*" />
+      <FormRow label="Cabin photo" error={errors?.image?.message}>
+        <FileInput
+          id="image"
+          accept="image/*"
+          {...register("image", { required: "This field is required." })}
+        />
       </FormRow>
 
       <FormRow>
