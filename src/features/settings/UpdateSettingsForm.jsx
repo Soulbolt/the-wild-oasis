@@ -5,6 +5,19 @@ import Spinner from "../../ui/Spinner";
 import { useSettings } from "./useSettings";
 import { useUpdateSetting } from "./useUpdateSetting";
 
+/**
+ * UpdateSettingsForm component.
+ *
+ * Renders a form to update settings state.
+ *
+ * Fetches settings from the useSettings hook.
+ * Uses the useUpdateSetting hook to dispatch updates.
+ *
+ * Shows loading state if settings are still loading.
+ * Disables inputs if an update is in progress.
+ *
+ * Updates state on blur of each input.
+ */
 function UpdateSettingsForm() {
   const {
     isLoading,

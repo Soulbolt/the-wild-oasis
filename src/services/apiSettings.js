@@ -1,3 +1,10 @@
+/**
+ * Fetches settings from the database.
+ *
+ * Retrieves all settings from the "settings" table in the database.
+ *
+ * @returns {Promise<object>} Promise resolving to the settings object.
+ */
 import supabase from "./supabase";
 
 export async function getSettings() {

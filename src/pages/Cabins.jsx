@@ -5,6 +5,13 @@ import CabinTable from "../features/cabins/CabinTable";
 import Button from "../ui/Button";
 import CreateCabinForm from "../features/cabins/CreateCabinForm";
 
+/**
+ * Renders the Cabins page.
+ *
+ * Displays a heading, a table of cabins, a button
+ * to open the create cabin form modal, and the
+ * create cabin form modal component.
+ */
 function Cabins() {
   const [showForm, setShowForm] = useState(false);
 
