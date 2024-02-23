@@ -92,7 +92,9 @@ function Row({ children }) {
     </StyledRow>
   );
 }
-function Footer({ children }) {}
+function Footer({ children }) {
+  return <StyledFooter role="footer">{children}</StyledFooter>;
+}
 
 Table.Header = Header;
 Table.Body = Body;
