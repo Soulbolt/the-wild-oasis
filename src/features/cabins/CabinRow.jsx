@@ -9,7 +9,6 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import Table from "../../ui/Table";
 import Menus from "../../ui/Menus";
-import { useNavigate } from "react-router-dom";
 
 const Img = styled.img`
   display: block;
@@ -41,7 +40,6 @@ const Discount = styled.div`
 function CabinRow({ cabin }) {
   const { isDeleting, deleteCabin } = useDeleteCabin();
   const { isCreating, createCabin } = useCreateCabin();
-  const navigate = useNavigate();
 
   function handleDuplicate() {
     createCabin({
@@ -115,9 +113,7 @@ function CabinRow({ cabin }) {
               <ConfirmDelete
                 resourceName="cabins"
                 disable={isDeleting}
-                onConfirm={() =>
-                  deleteCabin(cabinId, { onSettled: () => navigate("/cabins") })
-                }
+                onConfirm={() => deleteCabin(cabinId)}
               />
             </Modal.Window>
           </Menus.Menu>
