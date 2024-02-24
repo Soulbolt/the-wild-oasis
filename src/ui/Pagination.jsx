@@ -98,7 +98,8 @@ function Pagination({ count }) {
           onClick={nextPage}
           disabled={currentPage === pageCount}
         >
-          <HiChevronRight /> <span>Next</span>
+          <span>Next</span>
+          <HiChevronRight />
         </PaginationButton>
       </Buttons>
     </StyledPagination>
