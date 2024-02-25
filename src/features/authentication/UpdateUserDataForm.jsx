@@ -37,7 +37,7 @@ function UpdateUserDataForm() {
     );
   }
 
-  function handleCancel(e) {
+  function handleCancel() {
     setFullName(currentFullName);
     setAvatar(null);
   }
