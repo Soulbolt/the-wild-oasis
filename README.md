@@ -7,4 +7,7 @@ where they can filter through the unconfirmed, confirmed, checked in and checked
 by alphabetical order or price. Section to create a new user with email verification, can add an image 
 to display as their avatar. Each web application's route is protected so no unauthorized user can access 
 the application unless they are able to login for authentication and access.
+# Access
+Feel free to reach out via LinkedIn, email or github so that I can provide you with a test account to 
+check out my project: https://da-booking-project.netlify.app/
 
